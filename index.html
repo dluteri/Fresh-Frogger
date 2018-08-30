@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Effective JavaScript: Frogger</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- for modal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+</head>
+<body>
+    <script src="js/resources.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/engine.js"></script>
+
+  <div class="modal_background hide">
+    <div class="modal_body">
+      <div class="modal_heading">
+        <h2 class="modal_title">Congratulations, you won!</h2>
+  <!--      <span class="modal-close">X</span> -->
+      </div>
+      <div class="modal_stats">
+        <h3 class="modal_title"> But you were also eaten by a shark.  Just when you thought it was safe to go in the water.</h3>
+    <!--    <span class="modal_time"></span>
+        <span class="modal_stars"></span>
+        <span class="modal_moves"></span> -->
+      </div>
+      <h4 style="text-align:center;">Would you like to play again?</h4>
+      <div class="modal_buttons">
+        <button class="modal_button modal_cancel">No Thanks</button>
+        <button class="modal_button modal_replay">Play Again</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
