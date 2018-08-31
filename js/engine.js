@@ -25,6 +25,10 @@ var Engine = (function(global) {
         lastTime,
         id;
 
+// Modal globals
+const modal = document.querySelector('.modal-background');
+const modal_button = document.querySelector('#modalButton');
+
     canvas.width = 505;
     canvas.height = 606;
     doc.body.appendChild(canvas);
@@ -57,7 +61,7 @@ var Engine = (function(global) {
          * function again as soon as the browser is able to draw another frame.
          */
 
-if(player.victory === true) {
+if (player.victory === true) {
   win.cancelAnimationFrame(id);
   modal.classList.toggle('hide');
 }
@@ -65,7 +69,6 @@ else {
       id = win.requestAnimationFrame(main);
     }
 }
-
 
 
     /* This function does some initial setup that should only occur once,

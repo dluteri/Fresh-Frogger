@@ -87,17 +87,18 @@ handleInput(input) {
 }
 
 update() {
-  //check for collisins
+  //check for collisions
   for(let enemy of allEnemies) {
     if (this.y === enemy.y && (enemy.x + enemy.horiz/2 > this.x
       && enemy.x < this.x + this.horiz/2)) {
         this.reset();
   }
   }
+  //check for win
   if(this.y === -28) {
     this.sprite = 'images/SpriteShark.png';
     this.y = 35;
-    this.victory = true;
+    this.victory = true;  //stops game
   }
 }
 
@@ -144,15 +145,7 @@ document.addEventListener('keyup', function(e) {
     player.handleInput(allowedKeys[e.keyCode]);
 });
 
-// const modal = document.querySelector('.modal-bg');
-// const replay = document.querySelector('#modal-button');
-
-// replay.addEventListener('click', function() {
-//   modal.classList.toggel('hide');
-//   player.reset();
-//   player.victory = false;
-//   win.requestAnimationFrame(main);
-// });
+// Modal globals
 const modal = document.querySelector('.modal-background');
 const modal_button = document.querySelector('#modalButton');
 
@@ -173,3 +166,20 @@ document.onload = function() {
   toggleModal() // opens the modal
   toggleModal() // closes the modal
 }
+
+// "No thanks"/cancel button function
+document.querySelector('.modal-cancel').addEventListener('click', () => {
+  toggleModal();
+});
+
+// "Play Again"/Replay button function
+document.querySelector('.modal-replay').addEventListener('click', () => {
+console.log('replay');
+//  function resetGame() {
+  player.victory = false;
+  player.reset();
+//  win.requestAnimationFrame(main);
+// hero.reset();
+//  toggleModal();
+//  requestAnimationFrame(main);
+});
