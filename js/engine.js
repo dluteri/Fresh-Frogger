@@ -186,9 +186,10 @@ else {
         'images/water-block.png',
         'images/grass-block.png',
         'images/enemy-bug.png',
-        'images/char-boy.png',
         'images/char-horn-girl.png',
-        'images/SpriteShark.png'
+        'images/SpriteShark.png',
+        'images/splat.png',
+        'images/bug.png'
     ]);
     Resources.onReady(init);
 
